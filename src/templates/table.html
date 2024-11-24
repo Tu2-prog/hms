@@ -1,0 +1,35 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<h3>Palindrome Computation Database</h3>
+
+<ul>
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Results</th>
+            <th>No. Cycles</th>
+        </tr>
+        {% for palindrome in palindromes %}
+        <tr>
+            <td>{{palindrome.number}}</td>
+            <td>{{palindrome.result}}</td>
+            <td>{{palindrome.num_cycles}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</ul>
